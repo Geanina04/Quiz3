@@ -1,0 +1,6 @@
+# CodeIgniter se sirve desde public/. Si el DocumentRoot es la carpeta del proyecto
+# (por ejemplo http://localhost/workshop5/), todo se reenvía a public/ y así
+# app/, system/, writable/ y .env nunca son accesibles por URL.
+RewriteEngine On
+RewriteRule ^$ public/ [L]
+RewriteRule (.*) public/$1 [L]

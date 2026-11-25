@@ -1,0 +1,8 @@
+# Archivos generados por CodeIgniter (no se versionan)
+writable/cache/*
+writable/logs/*
+writable/session/*
+writable/debugbar/*
+writable/uploads/*
+!writable/**/index.html
+!writable/**/.gitkeep

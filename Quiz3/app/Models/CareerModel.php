@@ -1,0 +1,21 @@
+<?php
+
+namespace App\Models;
+
+use CodeIgniter\Model;
+
+class CareerModel extends Model
+{
+    protected $table         = 'careers';
+    protected $primaryKey    = 'id';
+    protected $returnType    = 'array';
+    protected $allowedFields = ['name'];
+
+    /**
+     * Todas las carreras ordenadas por nombre (para el dropdown del formulario).
+     */
+    public function listAll(): array
+    {
+        return $this->orderBy('name', 'ASC')->findAll();
+    }
+}
